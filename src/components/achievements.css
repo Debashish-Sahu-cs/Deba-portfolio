@@ -1,0 +1,248 @@
+:root {
+  --bg-dark: #1f1f21;
+  --bg-mid: #6f6d6b;
+  --bg-light: #d7d3d0;
+  --gold: #d6a84a;
+  --text: #fff;
+  --muted: #d6d6d6;
+  --maxwidth: 1450px;
+  --card-bg: rgb(24, 24, 24);
+  --bar-bg:rgb(0, 0, 0);
+  --proj-card-bg:linear-gradient(
+    180deg,
+    #444444 0%,
+    #454545 60%
+  );
+  --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #191919eb 40%,
+      #2a2a2aeb 60%,
+      #333333eb 80%,
+      #3d3d3deb 95%,
+      #494949ed 100%
+    );
+}
+[theme="true"]{
+  --bg-dark: #4d4d4d;
+  --bg-mid: #6f6d6b;
+  --bg-light: #d7d3d0;
+  --gold: #ffe08a;
+  --muted: #323232;
+  --text:#1d1d1d;
+  --maxwidth: 1450px;
+  --card-bg: rgb(213, 213, 212);
+  --bar-bg:rgb(143, 143, 143);
+  --proj-card-bg:linear-gradient(
+    180deg,
+    rgb(213, 213, 212)0%,
+    rgb(175, 175, 175)60%
+  );  
+   --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #909090e4 40%,
+      #9f9f9f98 60%,
+      #a6a6a695 80%,
+      #acacac77 95%,
+      #b3b3b376 100%
+    );
+}
+.achievements {
+  padding: 130px 16px 0;
+  color: var(--text);
+  background: var(--pannel-gradient);
+}
+.ach-inner {
+  max-width: var(--maxwidth);
+  height: 90vh;
+  margin: 0 auto;
+  padding: 12px 18px;
+}
+.long-underline {
+  width: 200px;
+}
+/* row grid */
+.ach-row {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 28px;
+  align-items: center;
+  margin: 48px 0;
+  animation: onloadApear 1.6s both;
+  transform-origin: bottom;
+}
+
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* alternate row: image on right (reverse order visually) */
+.ach-row--alt {
+  grid-template-columns: 460px 1fr;
+}
+
+.ach-text {
+  z-index: 2;
+}
+.ach-title {
+  font-size: clamp(18px, 2.2vw, 22px);
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.ach-text p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.65;
+  font-size: clamp(13px, 1.6vw, 15px);
+  letter-spacing: 0.2px;
+  max-width: 68ch;
+}
+
+.ach-text a{
+  color: var(--gold);
+}
+
+.ach-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* the mockup container  */
+.ach-mockup {
+  width: 420px;
+  height: 260px;
+  background: var(--proj-card-bg);
+  border-radius: 4px;
+  box-shadow: 25px 25px 0 rgba(0, 0, 0, 0.18);
+  position: relative;
+  padding: 22px;
+}
+
+/* inner 'desktop' rectangle */
+.mock-desktop {
+  width: 60%;
+  height: 51%;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 700;
+  position: absolute;
+  left: 12%;
+  top: 20%;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.477);
+}
+.ach-inner-img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(43, 43, 43, 0.69);
+  border-radius: 2px;
+}
+/* inner 'mobile' rectangle on the right/bottom */
+.mock-mobile {
+  width: 18%;
+  height: 50%;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 700;
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.477);
+}
+
+/* smaller decorative shadow behind the mockup */
+.ach-mockup::after {
+  content: "";
+  position: absolute;
+  right: -26px;
+  bottom: -26px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/*  Responsive */
+@media (max-width: 980px) {
+  .ach-row,
+  .ach-row--alt {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* stack: image on top, text below */
+  .ach-row--alt {
+    order: 0;
+  }
+
+  .ach-image {
+    order: 0;
+  }
+  .ach-text {
+    padding-bottom: 12px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.12);
+    order: 1;
+  }
+
+  /* add gray separator line between image & text */
+  .ach-image {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+
+  /* scale down mockup */
+  .ach-mockup {
+    width: 400px;
+    height: 220px;
+    padding: 18px;
+  }
+
+  .mock-desktop {
+    left: 10%;
+    top: 12%;
+    width: 58%;
+    height: 50%;
+  }
+  .mock-mobile {
+    right: 8%;
+    top: 40%;
+    width: 18%;
+    height: 50%;
+  }
+}
+
+/* tiny screens */
+@media (max-width: 460px) {
+  .ach-inner {
+    padding: 8px 12px;
+  }
+  .ach-mockup {
+    width: 90%;
+    height: 180px;
+  }
+  .ach-title {
+    font-size: 16px;
+  }
+  .ach-text p {
+    font-size: 13px;
+  }
+  .ach-row {
+    margin: 28px 0;
+  }
+}

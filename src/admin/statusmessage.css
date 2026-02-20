@@ -1,0 +1,32 @@
+
+@keyframes popup {
+    0%{
+        transform: scale(0);
+    }
+    20%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+.alert-message-container{
+  position: fixed;
+  width: 100%;
+  top: 95px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;
+  animation: popup 3s ;
+}
+.tech-insert-message{
+    background:  #1f1f21;
+    padding: 18px 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+}

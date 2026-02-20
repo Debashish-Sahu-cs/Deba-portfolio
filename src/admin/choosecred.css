@@ -1,0 +1,128 @@
+:root {
+  --bg-dark: #1f1f21;
+  --bg-mid: #2d2d2d;
+  --gold: #d6a84a;
+  --text: #fff;
+  --muted: #9b9b9b;
+  --contact-form-bg: rgba(59, 59, 59, 0.814) ;
+  --textbox-bg: rgba(25, 25, 25, 0.768);
+  --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #191919eb 40%,
+      #2a2a2aeb 60%,
+      #333333eb 80%,
+      #3d3d3deb 95%,
+      #494949ed 100%
+    );
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+html,
+body {
+  font-family: "Jaro", sans-serif;
+  font-display: swap;
+  font-weight: 100;
+  height: 100%;
+  background: var(--bg-dark);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+}
+::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background-color: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(214, 168, 74, 0) 0%,
+    rgba(214, 168, 74, 0.9) 20%,
+    rgba(214, 168, 74, 0.95) 50%,
+    rgba(214, 168, 74, 0.9) 80%,
+    rgba(214, 168, 74, 0) 100%
+  );
+}
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.choose-section{
+    width: 100vw;
+    height: 100vh;
+    background: var(--pannel-gradient);
+}
+.choose-inner{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choose-inner h2{
+  padding: 10px 0;
+  animation: onloadApear 0.6s both;  
+}
+.btn-container-box{
+    width: 400px;
+    background: var(--contact-form-bg);
+    border-radius: 5px;
+    padding: 20px;
+    animation: onloadApear 0.6s both;
+}
+.select-btn-container{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 15px;
+}
+
+.curd-btn{
+    background: var(--gold);
+    color: var(--text);
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px 8px;
+    margin: 20px 15px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 20px 20px var(--bg-dark) , inset 0 4px 5px #e6e6e6;
+    transition: all 200ms ease-in-out;
+}
+
+.curd-btn:hover{
+    background-color: #e7b551;
+    transform: scale(1.07);
+}
+/* .select-btn-container:hover .curd-btn:not(:hover){
+  filter: blur(2px);
+} */
+
+@media (max-width: 420px) {
+    .select-btn-container{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,29 @@
+:root {
+  --bg-dark: #1f1f21;
+  --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #191919eb 40%,
+      #2a2a2aeb 60%,
+      #333333eb 80%,
+      #3d3d3deb 95%,
+      #494949ed 100%
+    );
+}
+[theme="true"]{
+  --bg-dark: #4d4d4d;
+   --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #909090e4 40%,
+      #9f9f9f98 60%,
+      #a6a6a695 80%,
+      #acacac77 95%,
+      #b3b3b376 100%
+    );
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  background: var(--pannel-gradient);
+}

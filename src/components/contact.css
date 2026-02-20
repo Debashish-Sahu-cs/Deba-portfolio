@@ -1,0 +1,223 @@
+:root {
+  --bg-dark: #1f1f21;
+  --bg-mid: #6f6d6b;
+  --gold: #d6a84a;
+  --text: #fff;
+  --muted: #9b9b9b;
+  --contact-form-bg: rgba(59, 59, 59, 0.814) ;
+  --textbox-bg: rgba(25, 25, 25, 0.768);
+  --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #191919eb 40%,
+      #2a2a2aeb 60%,
+      #333333eb 80%,
+      #3d3d3deb 95%,
+      #494949ed 100%
+    );
+}
+[theme="true"]{
+  --bg-dark: #4d4d4d;
+  --bg-mid: #6f6d6b;
+  --gold: #ffe08a;
+  --muted: #323232;
+  --contact-form-bg: rgba(189, 188, 188, 0.938) ;
+  --textbox-bg: rgba(86, 86, 86, 0.707);
+  --text:#1d1d1d;
+  --hero-bg: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(30, 30, 30, 0.85) 14%,
+    rgba(160, 156, 153, 0.08)
+  );
+   --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #909090e4 40%,
+      #9f9f9f98 60%,
+      #a6a6a695 80%,
+      #acacac77 95%,
+      #b3b3b376 100%
+    );
+}
+
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+textarea::-webkit-resizer{
+    display: none;
+}
+.footer {
+  height: 100vh;
+  color: #f5f5f5;
+  padding: 200px 20px;
+  background: var(--pannel-gradient);
+  background-attachment: fixed;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.footer-contact {
+  flex: 1 1 350px;
+  background-color: var(--contact-form-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: onloadApear 1.4s both;
+  transform-origin: bottom;
+}
+.contact-form .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-group input:focus,
+#message:focus {
+  border: 1px solid var(--gold);
+}
+.contact-form label {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px 18px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  background-color: var(--textbox-bg);
+  color: var(--text);
+  transition: all 400ms ease-in-out;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color: var(--muted);
+}
+
+.btn-send {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: none;
+  background-color: var(--gold);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  box-shadow: 0 20px 20px var(--bg-dark) , inset 0 4px 5px #e6e6e6;
+}
+
+.btn-send:hover {
+  background-color: #f1c45e;
+}
+
+.footer-info {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: onloadApear 1.4s both;
+  transform-origin: bottom;
+}
+
+.tagline {
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.contact-details {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.contact-details li {
+  margin-bottom: 0.4rem;
+}
+
+.contact-details li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.socials {
+  margin-top: 1rem;
+  padding: 5px;
+}
+
+.socials a {
+  color: var(--text);
+  margin-right: 20px;
+  font-size: 50px;
+  transition: all 250ms ease-in;
+}
+
+.socials a:hover {
+  color: var(--gold);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--textbox-bg);
+  padding-top: 1rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer{
+    height: 100%;
+  }
+  .footer-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-contact,
+  .footer-info {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .footer-contact {
+    order: -1;
+  }
+
+  .link-columns {
+    justify-content: space-around;
+  }
+  .footer-bottom {
+    font-size: 0.7.5rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,235 @@
+:root {
+  --bg-dark: #1f1f21;
+  --bg-mid: #6f6d6b;
+  --bg-light: #d7d3d0;
+  --gold: #d6a84a;
+  --text: #fff;
+  --muted: #9b9b9b;
+  --max-width: 1450px;
+  --card-bg: rgb(24, 24, 24);
+  --bar-bg:rgb(0, 0, 0);
+  --textbox-bg: rgba(25, 25, 25, 0.768);
+  --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #191919eb 40%,
+      #2a2a2aeb 60%,
+      #333333eb 80%,
+      #3d3d3deb 95%,
+      #494949ed 100%
+    );
+}
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.project-table-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px 40px;
+  background: var(--pannel-gradient);
+}
+.back-btn-wrapper{
+  width: 100%;
+  max-width: var(--max-width);
+  text-align: left;
+  padding: 5px 0;
+  animation: onloadApear 0.6s both;
+}
+.back-btn{
+  background: var(--gold);
+  color: var(--text);
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.project-table-container {
+  width: 100%;
+  max-width: var(--max-width);
+  max-height: 600px;
+  overflow-y: auto;
+  background: rgba(25, 25, 25, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(214, 168, 74, 0.15);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.65);
+  animation: onloadApear 0.6s both;
+}
+.project-table-container::-webkit-scrollbar {
+  display: none;
+}
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+}
+
+.project-table thead {
+  position: sticky;
+  top: 0;
+  background: var(--gold);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.project-table th {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.project-table td {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.project-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.project-table tbody tr:hover {
+  background: rgba(214, 168, 74, 0.07);
+  transform: translateY(-2px);
+}
+
+.project-img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.project-desc {
+  max-width: 250px;
+  overflow: hidden;
+  color: var(--muted);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  background: rgba(214, 168, 74, 0.12);
+  color: var(--gold);
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(214, 168, 74, 0.3);
+}
+
+.project-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap:8px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.btn-edit {
+  background: rgba(214, 168, 74, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(214, 168, 74, 0.4);
+}
+
+.btn-edit:hover {
+  background: var(--gold);
+  color: #000;
+  box-shadow: 0 0 12px rgba(214, 168, 74, 0.6);
+}
+
+.btn-delete {
+  background: rgba(255, 0, 0, 0.08);
+  color: #ff5c5c;
+  border: 1px solid rgba(255, 0, 0, 0.25);
+}
+
+.btn-delete:hover {
+  background: #ff4d4d;
+  color: white;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+}
+
+@media (max-width: 900px) {
+  .project-table thead {
+    display: none;
+  }
+  .project-table-container{
+    padding: 2px;
+  }
+  .project-table,
+  .project-table tbody,
+  .project-table tr,
+  .project-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .project-table tr {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 16px;
+    background: rgba(25, 25, 25, 0.65);
+  }
+
+  .project-table td {
+    border: none;
+    padding: 0.6rem 0;
+  }
+
+  .project-desc {
+    max-width: 100%;
+  }
+
+  .project-img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+@media (max-width :420px) {
+    .project-table-wrapper{
+        padding: 100px 20px 30px;
+    }
+}

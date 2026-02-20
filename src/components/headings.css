@@ -1,0 +1,29 @@
+:root{
+    --gold: #d6a84a;
+    --text:#fff;
+}
+[theme="true"]{
+    --gold: #ffe08a;
+    --text:#1d1d1d;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.section-header h2 {
+  font-size: 36px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.section-header-underline {
+  height: 6px;
+  width: 120px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(214, 168, 74, 0.95),
+    rgba(214, 168, 74, 0.6)
+  );
+  border-radius: 4px;
+  opacity: 0.95;
+}

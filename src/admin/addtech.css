@@ -1,0 +1,175 @@
+:root {
+  --bg-dark: #1f1f21;
+  --bg-mid: #6f6d6b;
+  --bg-light: #d7d3d0;
+  --gold: #d6a84a;
+  --text: #fff;
+  --muted: #9b9b9b;
+  --maxwidth: 1450px;
+  --card-bg: rgb(24, 24, 24);
+  --bar-bg:rgb(0, 0, 0);
+  --textbox-bg: rgba(25, 25, 25, 0.768);
+  --pannel-gradient: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #191919eb 40%,
+      #2a2a2aeb 60%,
+      #333333eb 80%,
+      #3d3d3deb 95%,
+      #494949ed 100%
+    );
+}
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.add-tech-section{
+    height: 100vh;
+    width: 100vw;
+    background: var(--pannel-gradient);
+    padding-top: 95px;
+}
+.add-tech-inner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back-btn-wrapper{
+  width: 300px;
+  text-align: left;
+  padding: 5px 0;
+  animation: onloadApear 0.6s both;
+
+}
+.back-btn{
+  background: var(--gold);
+  color: var(--text);
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tech-view-box{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    animation: onloadApear 0.6s both;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  flex: 1 1 1;
+  border: 1px solid rgba(105, 105, 105, 0.53);
+  border-radius: 12px;
+  color: #101010bd;
+  background:var(--card-bg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform-origin: center;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+.tech-icon {
+  width: 80%;
+  height: 80%;
+}
+.bar-container {
+  height: 12px;
+  width: 80%;
+  border: 1px solid rgba(90, 90, 90, 0.378);
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--bar-bg);
+}
+.bars {
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(99, 70, 0, 0.684) 0%,
+    rgba(166, 116, 0, 0.809) 50%,
+    rgb(255, 179, 0) 100%
+  );
+  position: relative;
+  bottom: 0%;
+  border-radius: 100px;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-weight: 100;
+  text-align: end;
+}
+.percs {
+  background-color: rgba(0, 0, 0, 0.378);
+  border-radius: 100px;
+  border: 1px solid rgb(104, 104, 104);
+  padding: 2px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  bottom: 30%;
+}
+.tech-add-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    animation: onloadApear 0.6s both;
+}
+.fields{
+    padding: 10px 0;
+}
+
+.fields input,
+.fields select,
+.fields option{
+    background: var(--textbox-bg);
+    padding: 10px 8px;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 100%;
+    color: var(--text);
+}
+.fields label{
+    color: var(--muted);
+}
+.fields input[type=number]::-webkit-inner-spin-button, 
+.fields input[type=number]::-webkit-outer-spin-button {
+  display: none;
+  margin: 0;
+}
+.add-tech-btn{
+  color: var(--text);
+  background: var(--gold);
+  padding: 10px 8px;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 5px ;
+  font-weight: 700;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 20px 20px var(--bg-dark) , inset 0 4px 5px #e6e6e6;
+
+}
+.add-tech-btn:hover{
+  background-color: #e7b550;
+}
+@media (max-width: 500px ) {
+    .card{
+      height: 140px;
+      width: 200px;
+    }
+}
