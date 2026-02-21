@@ -38,8 +38,17 @@
       #b3b3b376 100%
     );
 }
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .tech-section {
-  padding: 120px 16px;
   background: rgb(60, 60, 60);
   color: var(--text);
   background: var(--pannel-gradient);
@@ -50,7 +59,7 @@
 .tech-inner {
   max-width: var(--maxwidth);
   margin: 0 auto;
-  padding: 8px 20px;
+  padding: 120px 16px 60px;
   text-align: center;
 }
 
@@ -58,9 +67,7 @@
   color: var(--gold);
   font-weight: 300;
   padding-bottom: 20px;
-  animation: apear both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 30%;
+  animation: onloadApear 0.8s both;
 }
 
 .tech-grid {
@@ -75,9 +82,7 @@
   margin-bottom: 16px;
   font-size: 18px;
   color: var(--text);
-  animation: apear  both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 30%;
+  animation: onloadApear 0.8s both;  
 }
 
 .carousel {
@@ -86,6 +91,7 @@
   flex: 1 1;
   align-items: center;
   position: relative;
+  animation: onloadApear 0.8s both;
 }
 
 .viewport {
@@ -154,8 +160,8 @@
   transition: transform 260ms ease, box-shadow 260ms ease;
 }
 .tech-icon {
-  width: 80%;
   height: 80%;
+  width: 80%;
 }
 .bar-container {
   height: 12px;

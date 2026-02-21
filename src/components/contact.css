@@ -119,9 +119,9 @@ textarea::-webkit-resizer{
   margin-top: 0.5rem;
   border: none;
   background-color: var(--gold);
-  color: var(--text);
+  color: var(--bg-dark);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
@@ -129,7 +129,8 @@ textarea::-webkit-resizer{
   box-shadow: 0 20px 20px var(--bg-dark) , inset 0 4px 5px #e6e6e6;
 }
 
-.btn-send:hover {
+.btn-send:hover,
+.btn-send:focus {
   background-color: #f1c45e;
 }
 

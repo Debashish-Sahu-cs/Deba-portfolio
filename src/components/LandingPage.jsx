@@ -30,7 +30,7 @@ const LandingPage = React.memo(() => {
           </p>
           <div className="cta-btns">
             <div className="cta">
-                <NavLink className="hire" to={"/footer"} aria-label="Here me button">Hire Me</NavLink >
+                <NavLink className="hire" to={"/contact"} aria-label="Here me button">Hire Me</NavLink >
             </div>
             <a className="talk-btn" target="_blank" href="https://wa.me/917043691404?text=Hi,%20I%20am%20" rel="noopener noreferrer" aria-label="lets talk"><i className="fab fa-whatsapp"></i></a>
             <a className="talk-btn" href="https://www.linkedin.com/in/debashish-sahu-cs/" target="_blank" aria-label="linked-in" ><i className="fab fa-linkedin"></i></a>
@@ -39,9 +39,9 @@ const LandingPage = React.memo(() => {
         </div>
         <div className="hero-right">
             {
-                theme ?  <div className="floating-card" ><img src={debaimgwhite} alt="Debashish Portrait" id="my-img-inwhite" /></div>
+                theme ?  <div className="floating-card" ><img src={debaimgwhite} alt="Debashish Portrait" rel="preload" as="image" id="my-img-inwhite" /></div>
                 :
-                <div className="floating-card" ><img src={debaimg} alt="Debashish Portrait" id="my-img" /></div>
+                <div className="floating-card" ><img src={debaimg} alt="Debashish Portrait" rel="preload" as="image" id="my-img" /></div>
             }
         </div>
       </div>

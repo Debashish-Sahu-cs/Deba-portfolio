@@ -49,10 +49,11 @@ const AddProject = React.memo(() => {
   };
 
   const navigateTo = useNavigate();
+  const messageColor = {color :"rgb(27, 145, 27)"};
 
   return (
     <main className="add-project-section">
-      <OperationMessage alertMessage={alertMessage} style={{color : "rgb(27, 145, 27)"}} />
+      <OperationMessage alertMessage={alertMessage} style={messageColor} />
       <div className="add-project-inner">
         <div className="project-view">
           <div className="back-btn-wrapper">

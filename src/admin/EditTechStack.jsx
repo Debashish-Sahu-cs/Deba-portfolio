@@ -53,10 +53,10 @@ const EditTechStack = React.memo(() => {
   }
 
   const navigateTo = useNavigate();
-
+  const deleteMessageColor = {color :"rgb(187, 31, 31)"};
   return (
     <main className="tech-table-wrapper">
-      <OperationMessage alertMessage={deleteStatusMessage} style={{color :"rgb(187, 31, 31)"}} />
+      <OperationMessage alertMessage={deleteStatusMessage} style={deleteMessageColor} />
       <div className="back-btn-wrapper">
           <button className="back-btn" type="button" aria-label="back button" onClick={() => navigateTo(-1)}>
               <i className="fa-solid fa-arrow-left"></i>

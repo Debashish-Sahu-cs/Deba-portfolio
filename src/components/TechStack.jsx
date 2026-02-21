@@ -56,6 +56,8 @@ const TechStack = React.memo(({ techTitle }) => {
                             decoding="async"
                             alt={element.techName}
                             className="tech-icon"
+                            height="159"
+                            width="159"
                           />
                           <TechBar
                             progressPercentage={element.techValue}
@@ -88,6 +90,8 @@ const TechStack = React.memo(({ techTitle }) => {
                             decoding="async"
                             alt={element.techName}
                             className="tech-icon"
+                            height="159"
+                            width="159"
                           />
                           <TechBar
                             progressPercentage={element.techValue}
@@ -119,6 +123,8 @@ const TechStack = React.memo(({ techTitle }) => {
                             decoding="async"
                             alt={element.techName}
                             className="tech-icon"
+                            height="159"
+                            width="159"
                           />
                           <TechBar
                             progressPercentage={element.techValue}
@@ -150,6 +156,8 @@ const TechStack = React.memo(({ techTitle }) => {
                             decoding="async"
                             alt={element.techName}
                             className="tech-icon"
+                            height="159"
+                            width="159"
                           />
                           <TechBar
                             progressPercentage={element.techValue}

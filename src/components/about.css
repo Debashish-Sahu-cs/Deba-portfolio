@@ -99,6 +99,7 @@ body {
   max-width: var(--maxwidth);
   margin: 0 auto;
   padding: 12px 20px;
+  animation: onloadApear 0.8s both;
 }
 
 .about-grid {

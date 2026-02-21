@@ -6,6 +6,16 @@
     --gold: #ffe08a;
     --text:#1d1d1d;
 }
+@keyframes onloadApear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .section-header {
   text-align: center;
   margin-bottom: 36px;
@@ -14,6 +24,7 @@
   font-size: 36px;
   color: var(--text);
   margin-bottom: 8px;
+  animation: onloadApear 0.8s both;
 }
 .section-header-underline {
   height: 6px;

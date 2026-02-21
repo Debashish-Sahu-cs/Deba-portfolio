@@ -69,9 +69,10 @@ function EditTech() {
     }
 
     const navigateTo = useNavigate();
+    const messageColor = {color : "rgb(27, 145, 27)"};
   return (
     <main className="add-tech-section" >
-        <OperationMessage alertMessage={alertMessage} style={{color : "rgb(27, 145, 27)"}}/>
+        <OperationMessage alertMessage={alertMessage} style={messageColor}/>
         <div className="add-tech-inner">
             <div className="back-btn-wrapper">
                 <button className="back-btn" type="button" aria-label="back button" onClick={() => navigateTo(-1)}>
