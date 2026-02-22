@@ -134,6 +134,7 @@
 }
 .article-description{
   color: var(--text);
+  font-weight: 200;
 }
 .tech-tags {
   display: flex;

@@ -53,17 +53,6 @@
   transition: all 400ms ease-in-out;
 }
 
-html,
-body {
-  font-family: "Jaro", sans-serif;
-  font-display: swap;
-  font-weight: 100;
-  background: var(--bg-dark);
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.4;
-}
 ::-webkit-scrollbar {
   display: none;
   width: 8px;
@@ -242,8 +231,8 @@ body {
   );
   border: 2px solid rgba(255, 255, 255, 0.12);
   box-shadow: 12px 20px 30px rgba(0, 0, 0, 0.6),
-    inset 0 3px 8px rgba(255, 255, 255, 0.058);
-  backdrop-filter: blur(3.4px);
+    inset 0 3px 8px rgba(255, 255, 255, 0.253);
+  backdrop-filter: blur(4px);
   transform: translateY(0);
   animation: floatY 3.6s ease-in-out infinite;
 }

@@ -54,7 +54,7 @@ const TechStack = React.memo(({ techTitle }) => {
                             src={import.meta.env.BASE_URL + element.techImgPath}
                             loading="lazy"
                             decoding="async"
-                            alt={element.techName}
+                            alt={element.techName + "tech icon"}
                             className="tech-icon"
                             height="159"
                             width="159"

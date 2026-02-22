@@ -49,7 +49,6 @@
   }
 }
 .tech-section {
-  background: rgb(60, 60, 60);
   color: var(--text);
   background: var(--pannel-gradient);
 }

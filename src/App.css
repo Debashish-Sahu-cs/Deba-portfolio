@@ -26,4 +26,10 @@ html, body{
   margin: 0;
   padding: 0;
   background: var(--pannel-gradient);
+  scroll-behavior: smooth;
+  font-family: "Jaro", sans-serif;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
 }

@@ -7,7 +7,7 @@ const EditTech = React.lazy(() => import("./admin/editTech")) ;
 const Navbar = React.lazy(() => import("./components/Navbar")) ;
 const LandingPage = React.lazy(() => import("./components/LandingPage"));
 const About = React.lazy(() => import("./components/About"));
-const TechStack = React.lazy(() => import("./components/techStack")) ;
+const TechStack = React.lazy(() => import("./components/TechStack")) ;
 const Project = React.lazy(() => import("./components/Projects"));
 const Achievements = React.lazy(() => import("./components/Achievements"));
 const Contact = React.lazy(() => import("./components/Contact"));
