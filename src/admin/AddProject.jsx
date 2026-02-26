@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./addproject.css";
 import OperationMessage from './OperationMessage';
 import { useNavigate } from 'react-router-dom';
-const AddProject = React.memo(() => {
+function AddProject() {
   const [projectDetails, setProjectDetails ] = useState({
     projectImgPath: "images/", projectTitle: "", projectDescription: "", 
     projectTechUsed: "", projectLink: "", projectLinkAriaLabel: "", projectLinkDisplay: ""
@@ -137,6 +137,6 @@ const AddProject = React.memo(() => {
       </div>
     </main>
   )
-});
+}
 
 export default AddProject

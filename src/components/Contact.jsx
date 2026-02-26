@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "./Headings";
 import "./contact.css";
-const Contact = React.memo(({contactTitle}) => {
+function Contact ({contactTitle}){
   return (
     <footer className="footer">
       <main className="footer-container" id="footer">
@@ -71,6 +71,6 @@ const Contact = React.memo(({contactTitle}) => {
       </div>
     </footer>
   );
-});
+}
 
 export default Contact;

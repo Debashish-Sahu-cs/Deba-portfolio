@@ -5,7 +5,7 @@ import debaimgwhite from "./deba-img-white.webp";
 import "./landingPage.css";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "./ThemeContext";
-const LandingPage = React.memo(() => {
+export default function LandingPage(){
     const{theme} = useContext(ThemeContext);
   return (
     <main id="home" className="hero">
@@ -47,5 +47,4 @@ const LandingPage = React.memo(() => {
       </div>
     </main>
   )
-});
-export default LandingPage;
+}

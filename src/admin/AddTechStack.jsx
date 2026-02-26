@@ -3,7 +3,7 @@ import "./addtech.css"
 import TechBar from '../components/TechBar';
 import {useNavigate} from "react-router-dom";
 import OperationMessage from './OperationMessage';
-const AddTechStack = React.memo(() => {
+function AddTechStack(){
     const [techElement , setTechElement] = useState({
         tech_img_path: "images/", tech_name: "", tech_value: 0, tech_category:""
     });
@@ -108,6 +108,6 @@ const AddTechStack = React.memo(() => {
         </div>
     </main>
   )
-});
+}
 
 export default AddTechStack

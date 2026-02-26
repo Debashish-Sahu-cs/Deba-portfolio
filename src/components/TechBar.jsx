@@ -1,5 +1,5 @@
-
-export default function TechBar({progressPercentage, barId, barWidth } ){
+import React  from "react";
+const TechBar = React.memo(({progressPercentage, barId, barWidth } ) =>{
     return(
         <div className="bar-container">
             <div className="bars" id={barId} style = {{width : barWidth +"%" }} aria-label={`Tech understating ${progressPercentage}%`} >
@@ -7,4 +7,5 @@ export default function TechBar({progressPercentage, barId, barWidth } ){
             </div>
         </div>
     )
-}
+});
+export default TechBar;

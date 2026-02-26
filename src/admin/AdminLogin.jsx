@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./adminlogin.css";
 import { useNavigate } from 'react-router-dom';
 function AdminLogin() {

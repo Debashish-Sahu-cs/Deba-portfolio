@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import React,{ useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function AdminGuard({children}) {
+const AdminGuard = React.memo(({children}) =>{
     const navigateTo = useNavigate();
     useEffect(() =>{
       if(!sessionStorage.getItem("user_auth_token") || sessionStorage.getItem("user_auth_token") === "undefined" || 
@@ -10,6 +10,6 @@ function AdminGuard({children}) {
       }
     },[]);
   return children ;
-}
+});
 
 export default AdminGuard 

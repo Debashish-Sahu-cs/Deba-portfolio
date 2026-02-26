@@ -1,4 +1,3 @@
-import React from 'react';
 import "./choosecred.css";
 import { Link } from 'react-router-dom';
 function ChooseCRUD() {

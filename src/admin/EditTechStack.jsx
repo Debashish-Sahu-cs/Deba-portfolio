@@ -3,7 +3,7 @@ import "./edittechstack.css";
 import { useNavigate } from "react-router-dom";
 import OperationMessage from "./OperationMessage";
 
-const EditTechStack = React.memo(() => {
+function EditTechStack(){
 
   const [techstack, setTechstack] = useState([]);
 
@@ -117,6 +117,6 @@ const EditTechStack = React.memo(() => {
       </div>
     </main>
   );
-});
+}
 
 export default EditTechStack;

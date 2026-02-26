@@ -1,7 +1,6 @@
-import React from "react";
 import SectionHeading from "./Headings";
 import "./achievements.css";
-const Achievements = React.memo(({achivementTitle}) => {
+function Achievements({achivementTitle}){
     return (
         <main className="achievements" id="achievements">
             <section className="ach-inner">
@@ -33,6 +32,6 @@ const Achievements = React.memo(({achivementTitle}) => {
             </section>
         </main>
     )
-});
+}
 
 export default Achievements;

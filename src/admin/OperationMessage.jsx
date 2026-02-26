@@ -1,5 +1,6 @@
+import React from "react";
 import "./statusmessage.css";
-function OperationMessage({alertMessage, style}) {
+const OperationMessage = React.memo(({alertMessage, style}) => {
   return (
     <>
         {
@@ -13,6 +14,6 @@ function OperationMessage({alertMessage, style}) {
         }
     </>
   )
-}
+});
 
 export default OperationMessage

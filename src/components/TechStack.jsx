@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SectionHeading from "./Headings";
 import TechBar from "./TechBar";
 import "./techstack.css";
-const TechStack = React.memo(({ techTitle }) => {
+function TechStack ({ techTitle }){
   const [techLanguaes, setTechLanguages] = useState([]);
   const [techLibNFrames, setTechLibNFrames] = useState([]);
   const [techDbs, setTechDbs] = useState([]);
@@ -176,6 +176,6 @@ const TechStack = React.memo(({ techTitle }) => {
       </section>
     </main>
   );
-});
+}
 
 export default TechStack;

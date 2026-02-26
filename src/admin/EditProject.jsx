@@ -3,7 +3,7 @@ import "./editproject.css";
 import { useNavigate } from "react-router-dom";
 import OperationMessage from "./OperationMessage";
 
-const EditProject = () => {
+function EditProject(){
   const [projectData, setProject] = useState([{
     projectImgPath: "images/", projectTitle: "", projectDescription: "", 
     projectTechUsed: "", projectLink: "", projectLinkAriaLabel: "", projectLinkDisplay: ""
